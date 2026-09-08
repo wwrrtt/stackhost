@@ -1,2 +1,12 @@
-runtime: python
-start: python app.py
+runtime:
+  image: python:3.11-slim
+
+commands:
+  start: "python3 app.py"
+
+repository:
+  branch: main
+  auto_deploy: false
+
+env:
+  - WEB_PORT:5000
